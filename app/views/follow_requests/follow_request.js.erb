@@ -1,0 +1,10 @@
+
+var added_follow_request = $("<%= j(render @follow_request) %>");
+
+added_follow_request.hide();
+
+$("#<%= dom_id(@follow_request) %>_new_follow_request_form").before(added_follow_request);
+
+added_follow_request.slideDown();
+
+$("#<%= dom_id(@follow_request) %>_new_follow_request_form #follow_request_body").val("");
